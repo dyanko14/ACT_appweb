@@ -1,0 +1,5 @@
+Corregir validacion de duplicados
+utilizar encripcion en el login
+corregir error al loguearse en ocasiones
+Corregir Update/Create de empleados
+Validar 

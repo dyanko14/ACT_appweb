@@ -1,0 +1,106 @@
+<main>
+<br>
+<blockquote>
+<div class="row">
+    <div class="col l1 m1 s1">
+    </div>
+    <div class="col l8 m10 s10">
+        <!--Input-->
+        <?= form_open('Admin/Empleados/Form_add'); ?>
+        <div class="col l4 m3 s6" style="text-align: right">
+            <i class="material-icons">person_pin</i>
+        </div>
+        <div class="col l2 m3 s6">
+            <label><span style="color: red">*&nbsp;</span>Nombre:</label>
+        </div>
+        <div class="col l6 m6 s12" style="text-align: center">
+            <?= form_input('Nombre', set_value('Nombre')) ?>
+            <span style="text-align: center;" class="red-text"><b><?php echo form_error('Nombre'); ?></b></span>
+        </div>
+        <!--/Input-->
+        <!--Input-->
+        <div class="col l4 m3 s6" style="text-align: right">
+            <i class="material-icons">person_pin</i>
+        </div>
+        <div class="col l2 m3 s6">
+            <label><span style="color: red">*&nbsp;</span>ApellidoM:</label>
+        </div>
+        <div class="col l6 m6 s12" style="text-align: center">
+            <?= form_input('ApellidoM', set_value('ApellidoM')) ?>
+            <span style="text-align: center;" class="red-text"><b><?php echo form_error('ApellidoM'); ?></b></span>
+        </div>
+        <!--Input-->
+        <div class="col l4 m3 s6" style="text-align: right">
+            <i class="material-icons">work</i>
+        </div>
+        <div class="col l2 m3 s6">
+            <label><span style="color: red">*&nbsp;</span>Cargo:</label>
+        </div>
+        <div class="col l6 m6 s12" style="text-align: center">
+        <select name="Cargo">
+          <option value=""></option>
+          <option value="Almacén">Almacén</option>
+          <option value="Calidad">Calidad</option>
+          <option value="Cobranza">Cobranza</option>
+          <option value="Compras">Compras</option>
+          <option value="Contabilidad">Contabilidad</option>
+          <option value="Desarrollador">Desarrollador</option>
+          <option value="Director">Director</option>
+          <option value="Diseño">Diseño</option>
+          <option value="Gerente">Gerente</option>
+          <option value="Ingeniería">Ingeniería</option>
+          <option value="Limpieza">Limpieza</option>
+          <option value="Mensajero">Mensajero</option>
+          <option value="Programador">Programador</option>
+          <option value="Proyectos">Proyectos</option>
+          <option value="Recepción">Recepción</option>
+          <option value="Técnico">Técnico</option>
+          <option value="Ventas">Ventas</option>
+          <option value="Viáticos">Viáticos</option>
+        </select>
+        <span style="text-align: center;" class="red-text"><b><?php echo form_error('Cargo'); ?></b></span>
+        </div>
+        <!--/Input-->
+        <!--Input-->
+        <div class="col l4 m3 s6" style="text-align: right">
+            <i class="material-icons">email</i>
+        </div>
+        <div class="col l2 m3 s6">
+            <label><span style="color: red">*&nbsp;</span>email:</label>
+        </div>
+        <div class="col l6 m6 s12" style="text-align: center">
+            <?= form_input('Email', set_value('Email')) ?>
+            <span style="text-align: center;" class="red-text"><b><?php echo form_error('Email'); ?></b></span>
+        </div>
+        <!--Input-->
+        <!--Input-->
+        <div class="col l4 m3 s6" style="text-align: right">
+            <i class="material-icons">info_outline</i>
+        </div>
+        <div class="col l2 m3 s6">
+            <label><span style="color: red">*&nbsp;</span>Género:</label>
+        </div>
+        <div class="col l6 m6 s12" style="text-align: center">
+            <select name="Genero">
+                <option value=""></option>
+                <option value="M" <?php echo  set_select('myselect', 'one'); ?> >Masculino</option>
+                <option value="F" <?php echo  set_select('myselect', 'two'); ?> >Femenino</option>
+            </select>
+            <span style="text-align: center;" class="red-text"><b><?php echo form_error('Genero'); ?></b></span>
+        </div>
+    </div>
+    <div class="col l3 m1 s1">
+    </div>
+</div>
+<!--Button-->
+<div class="row" style="text-align: center;">
+    <div class="col s1 m2 l2">
+    </div>
+    <div class="col s10 m8 l8">
+    <button type="submit" name="submit" class="waves-effect waves-light blue btn"><i class="material-icons left">done</i>
+        Dar de Alta
+    </button>
+    <br>
+    <br>
+</blockquote>
+</main>
