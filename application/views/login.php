@@ -23,7 +23,7 @@
     <div class="col s10 m8 l4 z-depth-3 white center-align">
         <!--Form-->
         <br>
-        <img class="responsive-img" src="<?= base_url()?>image/logo.png" width="100">
+        <img class="responsive-img" src="<?= base_url()?>image/logo_act.png" width="300">
         <br>
         <blockquote><h5 class="grey lighten-3" style="color: #808080">Control de Visitas</h5></blockquote>
         <br>

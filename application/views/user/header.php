@@ -19,12 +19,12 @@
     <li>
         <div class="userView">
           <div class="background">
-            <img src="<?=base_url()?>image/background.jpg">
+            <img src="<?=base_url()?>image/background_user.jpg">
           </div>
-          <a href="<?= base_url()?>User/Inicio"><img class="circle" src="<?=base_url()?>image/user_icon.jpg"></a>
+          <a href="<?= base_url()?>User/Inicio"><img class="circle" src="<?=base_url()?>image/user_icon.png"></a>
           <a href="<?= base_url()?>User/Inicio"><span class="white-text name"><?= $this->session->userdata('logged_in')?></span></a>
           <a href="<?= base_url()?>User/Inicio">
-          <span class="white-text email">Bienvenido</span></a>
+          <span class="white-text email">¡ Bienvenida !</span></a>
         </div>
       </li>
       <li><a href="<?= base_url()?>User/Inicio" class=<?= $modo_inicio ?>><i class="material-icons">home</i>Inicio</a></li>

@@ -19,9 +19,9 @@
     <li>
         <div class="userView">
           <div class="background">
-            <img src="<?=base_url()?>image/office.jpg">
+            <img src="<?=base_url()?>image/background_admin.jpg">
           </div>
-          <a href="<?= base_url()?>Admin/Inicio"><img class="circle" src="<?=base_url()?>image/user_icon.jpg"></a>
+          <a href="<?= base_url()?>Admin/Inicio"><img class="circle" src="<?=base_url()?>image/admin_icon.jpg"></a>
           <a href="<?= base_url()?>Admin/Inicio"><span class="white-text name"><?= $this->session->userdata('logged_in2')?></span></a>
           <a href="<?= base_url()?>Admin/Inicio">
           <span class="white-text email">Bienvenido Administrador</span></a>
