@@ -8,6 +8,8 @@
     <!--Let browser know website is optimized for mobile-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Favicon-->
+    <link rel="icon" href="<?php echo base_url(); ?>image/favicon.gif" type="image/gif">
     <title>Grupo ACT</title>
     <!--Import jQuery before materialize.js-->
     <script src="<?= base_url()?>scripts/jquery-3.1.1.min.js"></script>
