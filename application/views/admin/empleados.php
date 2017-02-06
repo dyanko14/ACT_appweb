@@ -6,7 +6,7 @@
       <tr>
         <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>ID</th>
         <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Nombre</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Apellido 1</th>
+        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Apellido M</th>
         <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Cargo</th>
         <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Correo</th>
         <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Género</th>

@@ -8,7 +8,7 @@ class Empleado extends CI_Model
       $lastname1 = ucwords($this->input->post('ApellidoM'));
       $posicion  = ucwords($this->input->post('Cargo'));
       $email     = $this->input->post('Email');
-      $sex       = $this->input->post('Genero');
+      $sex       = $this->input->post('Genero');    
       //--Data Query
       $this->db->select('*');
       $this->db->from('empleados');
@@ -48,18 +48,20 @@ class Empleado extends CI_Model
         $posicion  = ucwords($this->input->post('Cargo'));
         $email     = $this->input->post('Email');
         $sex       = $this->input->post('Genero');
+        $activo    = $this->input->post('Activo');        
         //--Data Query
         $this->db->select('*');
         $this->db->from('empleados');
         $this->db->where('e_nombre', $name);
         $this->db->where('e_apellido', $lastname1);
+        $this->db->where('email', $email);        
         $this->db->where('id_act', $id);
         $query = $this->db->get();
         //--Data Validation
         if ($query->num_rows() > 0)
         {
             $data = array (
-                'msj'  => 'Registro duplicado en la Base de Datos',
+                'msj'  => 'No has modificiado ningún dato',
                 'link' => 'Admin/Empleados',
             );
             $this->load->view('admin/header3',$data);
@@ -74,6 +76,7 @@ class Empleado extends CI_Model
                 'e_posicion' => $posicion,
                 'email'      => $email,
                 'e_genero'   => $sex,
+                'e_activo'   => $activo,
             );
             $this->db->where('id_act',$id);
             $this->db->replace('empleados', $data);

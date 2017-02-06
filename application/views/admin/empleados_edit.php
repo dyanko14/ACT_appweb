@@ -11,6 +11,7 @@
         $query = $this->db->query("SELECT * FROM empleados WHERE id_act = '$ID' ");
         foreach ($query->result() as $row){
           echo "<div style='display: none'>".form_input('ID', $row->id_act)."</div><br>";
+          echo "<div style='display: none'>".form_input('Activo', $row->e_activo)."</div><br>";
         ?>
         <div class="col l4 m3 s6" style="text-align: right">
             <i class="material-icons">person_pin</i>
