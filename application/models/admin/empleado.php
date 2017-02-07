@@ -4,9 +4,10 @@ class Empleado extends CI_Model
   public function addEmpleado()
   {
       //--Data from user
-      $name      = ucwords($this->input->post('Nombre'));
-      $lastname1 = ucwords($this->input->post('ApellidoM'));
-      $posicion  = ucwords($this->input->post('Cargo'));
+      $this->load->helper('inflector');
+      $name      = humanize($this->input->post('Nombre'));
+      $lastname1 = humanize($this->input->post('ApellidoM'));
+      $posicion  = humanize($this->input->post('Cargo'));
       $email     = $this->input->post('Email');
       $sex       = $this->input->post('Genero');    
       //--Data Query
@@ -42,10 +43,11 @@ class Empleado extends CI_Model
     public function editEmpleado()
     {
         //--Data from user
+        $this->load->helper('inflector');
         $id        = $this->input->post('ID');
-        $name      = ucwords($this->input->post('Nombre'));
-        $lastname1 = ucwords($this->input->post('ApellidoM'));
-        $posicion  = ucwords($this->input->post('Cargo'));
+        $name      = humanize($this->input->post('Nombre'));
+        $lastname1 = humanize($this->input->post('ApellidoM'));
+        $posicion  = humanize($this->input->post('Cargo'));
         $email     = $this->input->post('Email');
         $sex       = $this->input->post('Genero');
         $activo    = $this->input->post('Activo');        

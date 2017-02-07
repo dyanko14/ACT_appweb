@@ -28,6 +28,7 @@ class Personas extends CI_Controller {
 			redirect('/Unauthorized');
         }
 	}
+
 	public function Add()
 	{
 		if($this->session->userdata('logged_in'))
@@ -55,6 +56,7 @@ class Personas extends CI_Controller {
 			redirect('/Unauthorized');
 		}
 	}
+
 	public function Edit($id = '')
 	{
 		if($this->session->userdata('logged_in'))
@@ -83,6 +85,7 @@ class Personas extends CI_Controller {
 			redirect('/Unauthorized');
 		}
 	}
+
 	public function Form_add()
 	{
 		if($this->session->userdata('logged_in'))
@@ -90,9 +93,9 @@ class Personas extends CI_Controller {
 			$this->load->helper(array('form', 'url'));
 			$this->load->library('form_validation');
 			//--
-		    $this->form_validation->set_rules('Nombre', 'Nombre', 'trim|required|min_length[3]|max_length[50]|alpha');
-		    $this->form_validation->set_rules('ApellidoM', 'ApellidoM', 'trim|required|min_length[3]|max_length[50]|alpha');
-		    $this->form_validation->set_rules('ApellidoP', 'ApellidoP', 'trim|required|min_length[3]|max_length[50]|alpha');
+		    $this->form_validation->set_rules('Nombre', 'Nombre', 'trim|required|min_length[3]|max_length[50]');
+		    $this->form_validation->set_rules('ApellidoM', 'ApellidoM', 'trim|required|min_length[3]|max_length[50]');
+		    $this->form_validation->set_rules('ApellidoP', 'ApellidoP', 'trim|required|min_length[3]|max_length[50]');
 		    $this->form_validation->set_rules('IFE', 'IFE', 'trim|required|min_length[4]|max_length[25]');
      		$this->form_validation->set_rules('Genero', 'Genero', 'trim|required');
      		$this->form_validation->set_rules('Empresa', 'Empresa', 'trim|required');
@@ -127,6 +130,7 @@ class Personas extends CI_Controller {
 			redirect('/Unauthorized');
 		}
 	}
+
 	public function Form_edit()
 	{
 		if($this->session->userdata('logged_in'))
@@ -135,9 +139,9 @@ class Personas extends CI_Controller {
 			$this->load->library('form_validation');
 			//--
 			$this->form_validation->set_rules('ID', 'ID', 'required|numeric');
-		    $this->form_validation->set_rules('Nombre', 'Nombre', 'trim|required|min_length[3]|max_length[50]|alpha_numeric_spaces');
-		    $this->form_validation->set_rules('ApellidoM', 'ApellidoM', 'trim|required|min_length[3]|max_length[50]|alpha_numeric_spaces');
-		    $this->form_validation->set_rules('ApellidoP', 'ApellidoP', 'trim|required|min_length[3]|max_length[50]|alpha_numeric_spaces');
+		    $this->form_validation->set_rules('Nombre', 'Nombre', 'trim|required|min_length[3]|max_length[50]');
+		    $this->form_validation->set_rules('ApellidoM', 'ApellidoM', 'trim|required|min_length[3]|max_length[50]');
+		    $this->form_validation->set_rules('ApellidoP', 'ApellidoP', 'trim|required|min_length[3]|max_length[50]');
 		    $this->form_validation->set_rules('IFE', 'IFE', 'trim|required|min_length[4]|max_length[25]');
      		$this->form_validation->set_rules('Genero', 'Genero', 'trim|required');
      		$this->form_validation->set_rules('Empresa', 'Empresa', 'trim|required');

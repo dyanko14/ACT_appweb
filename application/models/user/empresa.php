@@ -8,7 +8,8 @@ class Empresa extends CI_Model
     public function addEmpresas()
     {
         //--Data from user
-        $r_social = $this->input->post('R_Social');
+        $this->load->helper('inflector');
+        $r_social = humanize($this->input->post('R_Social'));
         $acronimo = $this->input->post('Acronimo');
         //--Data Query
         $this->db->select('*');
@@ -51,9 +52,10 @@ class Empresa extends CI_Model
     public function editEmpresa()
     {
         //--Data from user
+        $this->load->helper('inflector');
         $id        = $this->input->post('ID');
-        $r_social  = $this->input->post('R_Social');
-        $acronimo  = $this->input->post('Acronimo');
+        $r_social = humanize($this->input->post('R_Social'));
+        $acronimo = $this->input->post('Acronimo');
         //--Data Query
         $this->db->select('*');
         $this->db->from('empresa');
@@ -64,7 +66,7 @@ class Empresa extends CI_Model
         if ($query->num_rows() > 0)
         {
             $data = array (
-                'msj'  => 'Registro duplicado en la Base de Datos',
+                'msj'  => 'No se ha modificado ningún dato',
                 'link' => 'User/Empresas',
                 $on    = "red-text",
                 //--

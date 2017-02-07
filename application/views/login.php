@@ -64,12 +64,12 @@
                 }
                 else
                 {
-                    echo "<div class='red white-text'> $title </div><br>";
+                    echo "<h6 class='red-text'> $title </h6>";
                 }
             ?>
             <?php
                 echo form_close();
-                echo validation_errors('<div class="red white-text">', '</div><br>');
+                echo validation_errors('<h6 class="red-text">', '</h6>');
             ?>
         </div>
         <div class="col s1 m3 l4">

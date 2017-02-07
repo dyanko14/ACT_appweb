@@ -16,6 +16,7 @@ class Login extends CI_Controller {
     $this->db->query("INSERT INTO login (user, pass, permiso) VALUES ('user','$encrypted_pass2',2)");
     */
   }
+
 	public function index()
 	{
     $this->session->unset_userdata('logged_in');
@@ -25,6 +26,7 @@ class Login extends CI_Controller {
     $data = array('title' => ''); //Invalid Login Feedback
 		$this->load->view('login',$data);
 	}
+
 	public function validation()
 	{
     $this->load->library('encrypt');
@@ -35,6 +37,7 @@ class Login extends CI_Controller {
     {
       $data = array('title' => '');
       $this->load->view('login',$data);
+      //redirect('Login', 'auto');
     }
     else
     {

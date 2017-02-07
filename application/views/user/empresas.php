@@ -6,7 +6,7 @@
       <tr>
         <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>ID</th>
         <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Empresa</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Acrónimo 1</th>
+        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Acrónimo</th>
         <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Editar</th>
       </tr>
     </thead>
