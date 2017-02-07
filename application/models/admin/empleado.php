@@ -3,47 +3,56 @@ class Empleado extends CI_Model
 {
   public function addEmpleado()
   {
-      //--Data from user
-      $this->load->helper('inflector');
-      $name      = humanize($this->input->post('Nombre'));
-      $lastname1 = humanize($this->input->post('ApellidoM'));
-      $posicion  = humanize($this->input->post('Cargo'));
-      $email     = $this->input->post('Email');
-      $sex       = $this->input->post('Genero');    
-      //--Data Query
-      $this->db->select('*');
-      $this->db->from('empleados');
-      $this->db->where('e_nombre', $name);
-      $this->db->where('e_apellido', $lastname1);
-      $query = $this->db->get();
-      //--Data Validation
-      if ($query->num_rows() > 0)
-      {
-          $data = array (
-              'msj'  => 'Registro duplicado en la Base de Datos',
-              'link' => 'Admin/Empleados/Add',
-          );
-          $this->load->view('admin/header3',$data);
-      }
-      else
-      {
-          //--Insert Data in DB
-          $data = array(
-              'e_nombre'   => $name,
-              'e_apellido' => $lastname1,
-              'e_posicion' => $posicion,
-              'email'      => $email,
-              'e_genero'   => $sex,
-              'e_activo'   => 'si',
-          );
-          $this->db->insert('empleados', $data);
-          redirect('Admin/Empleados');
-      }
-  }
-    public function editEmpleado()
+    //--Data from user
+    $this->load->helper('inflector');
+    $name      = humanize($this->input->post('Nombre'));
+    $lastname1 = humanize($this->input->post('ApellidoM'));
+    $posicion  = humanize($this->input->post('Cargo'));
+    $email     = $this->input->post('Email');
+    $sex       = $this->input->post('Genero');    
+    //--Data Query
+    $this->db->select('*');
+    $this->db->from('empleados');
+    $this->db->where('e_nombre', $name);
+    $this->db->where('e_apellido', $lastname1);
+    $query = $this->db->get();
+    //--Data Validation
+    if ($query->num_rows() > 0)
     {
-        //--Data from user
-        $this->load->helper('inflector');
+            $data = array (
+                $on    = "blue-text",
+                //--
+                'title'          => 'Registro de Empleados',
+                'msj'  => 'Registro duplicado en la Base de Datos',
+                'modo_inicio'    => '', 
+                'modo_empleados' => $on,
+                'modo_sesiones'  => '',                
+                'modo_buscar'    => '',
+                'modo_info'      => '',
+                'modo_salir'     => '',
+            );
+            $this->load->view('admin/header',$data);
+            $this->load->view('admin/duplicado',$data);
+    }
+    else
+    {
+      //--Insert Data in DB
+      $data = array(
+        'e_nombre'   => $name,
+        'e_apellido' => $lastname1,
+        'e_posicion' => $posicion,
+        'email'      => $email,
+        'e_genero'   => $sex,
+        'e_activo'   => 'si',
+      );
+      $this->db->insert('empleados', $data);
+      redirect('Admin/Empleados');
+    }
+  }
+  public function editEmpleado()
+  {
+    //--Data from user
+    $this->load->helper('inflector');
         $id        = $this->input->post('ID');
         $name      = humanize($this->input->post('Nombre'));
         $lastname1 = humanize($this->input->post('ApellidoM'));
@@ -63,10 +72,19 @@ class Empleado extends CI_Model
         if ($query->num_rows() > 0)
         {
             $data = array (
-                'msj'  => 'No has modificiado ningún dato',
-                'link' => 'Admin/Empleados',
+                $on    = "blue-text",
+                //--
+                'title'          => 'Modificación de Empleado',
+                'msj'            => 'No se ha modificado ningún dato',
+                'modo_inicio'    => '', 
+                'modo_empleados' => $on,
+                'modo_sesiones'  => '',                
+                'modo_buscar'    => '',
+                'modo_info'      => '',
+                'modo_salir'     => '',
             );
-            $this->load->view('admin/header3',$data);
+            $this->load->view('admin/header',$data);
+            $this->load->view('admin/duplicado',$data);
         }
         else
         {
