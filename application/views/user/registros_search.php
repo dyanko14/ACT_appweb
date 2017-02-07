@@ -1,6 +1,5 @@
 <main>
 <br>
-<blockquote>
   <div class="row" style="text-align: center">
     <div class="col s1 m1 l1">
     </div>
@@ -14,7 +13,7 @@
       <!--Form1-->
       <br>
       <!--Input-->
-      <?= form_open("User/Registros/Search_filter") ?>
+      <?= form_open("User/Buscar/Search_filter") ?>
     <div class="row">
     <div class="col l1 m1 s12">
     </div>
@@ -113,8 +112,8 @@
         <div class="col l6 m6 s12" style="text-align: center">
           <select name="genero_persona">
             <option value=""></option>
-            <option value="M">Masculino</option>          
-            <option value="F">Femenino</option>          
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
           </select>
           </div>
           <!--/Input-->
@@ -146,35 +145,51 @@
       </div>
       <!--/Form1-->      
       </div>
-      <div id="test2" class="col s12">
-      <!--Form2-->
-      <?= form_open("User/Registros/Search_filter2") ?>
-      <br>
-      <div class="col l6 m6 s12">
+
+
+      <div id="test2">
+      <?= form_open("User/Buscar/Search_filter2") ?>
+      <br><br><br>
+      <div class="row">
+
+      <div class="col l4 m4 s12">
+      </div>
+
+      <div class="col l2 m2 s6">
         <label>Fecha Inicial</label>
         <input class="datepicker" name="fecha_in">
         <br>
       </div>
-      <div class="col l6 m6 s12">
+      <div class="col l2 m2 s6">
         <label>Fecha Final</label>
         <input class="datepicker" name="fecha_out" value=<?=date('Y-m-d') ?>>
         <br>
       </div>
-      <button type="submit" name="submit" class="waves-effect waves-light orange btn"><i class="material-icons left">search</i>
-        Buscar
-      </button>
-      <br><br>
-      <!--/Form2-->
+
+      <div class="col l4 m4 s12">
+      </div>
+
+      <div class="col l12 m12 s12">
+        <button type="submit" name="submit" class="waves-effect waves-light orange btn"><i class="material-icons left">search</i>
+          Buscar
+        </button>
+      </div>
+
       <?= form_close() ?>
       </div>
-      <div id="test3" class="col s12">
-      <!--Form2-->
-      <?= form_open("User/Registros/Search_filter3") ?>
-      <br>
-      <div class="col l12 m12 s12" style="text-align: center;">
-      <!--/-->
+      </div>
+
+
+
+      <div id="test3">
+      <?= form_open("User/Buscar/Search_filter3") ?>
+      <br><br><br>
       <div class="row">
-      <div class="col l6 m6 s6">
+
+      <div class="col l4 m4 s12">
+      </div>
+
+      <div class="col l2 m2 s6">
       <select name="filtro">
         <option value=">="> Mayor/Igual a </option>
         <option value=">">  Mayor a       </option>
@@ -183,8 +198,8 @@
         <option value="=">  Igual a       </option>        
       </select>
       </div>
-      <!--/-->
-      <div class="col l6 m6 s6">
+      
+      <div class="col l2 m2 s6">
       <select name="filtro2">
         <option value="900">15 Min</option>
         <option value="1800">30 Min</option>
@@ -196,19 +211,19 @@
         <option value="18000">5 Horas</option>
       </select>
       </div>
-      <div>
-      <!--/--> 
+      
+      <div class="col l4 m4 s12">
       </div>
-      <br>
-      <br>
-      <button type="submit" name="submit" class="waves-effect waves-light orange btn"><i class="material-icons left">search</i>
-        Buscar
-      </button>
-      <br><br>
-      <!--/Form2-->
+
+      <div class="col l12 m12 s12">
+        <button type="submit" name="submit" class="waves-effect waves-light orange btn"><i class="material-icons left">search</i>
+          Buscar
+        </button>
+      </div>
+
       <?= form_close() ?>
       </div>
-    </div>
+
     <!--Div-->
     <div class="col s1 m1 l1">
     </div>

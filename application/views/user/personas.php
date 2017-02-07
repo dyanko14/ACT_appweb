@@ -1,7 +1,7 @@
 <main>
 <br>
-<blockquote>
-<div class="row" >
+
+<div style="padding-left: 30px; padding-right: 30px">
 <table id='large' class='tablesorter highlight centered responsive-table'>
     <thead>
       <tr>
@@ -52,14 +52,13 @@
  ?>
 </tbody>
 </table>
-</blockquote>
+</table>
 
 <!--Total Records-->
-<blockquote>
 <div class='center-align' style="border-top: 1px dotted gray">
    <h6><?php echo 'Registros: '.'<b>'.$query->num_rows().'</b>'; ?></h6>
 </div>
-</blockquote>
+</div>
 
 <!--Air Button-->
 <div class="fixed-action-btn horizontal click-to-toggle tooltipped" data-position="top" data-delay="50" data-tooltip="Opciones">

@@ -81,7 +81,7 @@
         </div>
         <div class="col l6 m6 s12" style="text-align: center">
             <select name="Genero">
-                <option value=""></option>
+                <option value=<?= $row->v_genero ?>> <?= $row->v_genero ?> </option>
                 <option value="M" <?php echo  set_select('myselect', 'one'); ?> >Masculino</option>
                 <option value="F" <?php echo  set_select('myselect', 'two'); ?> >Femenino</option>
             </select>
@@ -96,7 +96,7 @@
         </div>
         <div class="col l6 m6 s12" style="text-align: center">
             <select name="Empresa">
-            <option class=""></option>
+            <option value=""></option>
             <?php
             $query = $this->db->query("SELECT * FROM empresa ORDER BY r_social ASC");
             foreach ($query->result() as $row){

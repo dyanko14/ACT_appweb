@@ -11,12 +11,14 @@ class Empresa extends CI_Model
         $this->load->helper('inflector');
         $r_social = humanize($this->input->post('R_Social'));
         $acronimo = $this->input->post('Acronimo');
+
         //--Data Query
         $this->db->select('*');
         $this->db->from('empresa');
         $this->db->where('r_social', $r_social);
         $this->db->where('acronimo', $acronimo);
         $query = $this->db->get();
+        
         //--Data Validation
         if ($query->num_rows() > 0)
         {
@@ -56,46 +58,23 @@ class Empresa extends CI_Model
         $id        = $this->input->post('ID');
         $r_social = humanize($this->input->post('R_Social'));
         $acronimo = $this->input->post('Acronimo');
+        
         //--Data Query
         $this->db->select('*');
         $this->db->from('empresa');
         $this->db->where('r_social', $r_social);
         $this->db->where('acronimo', $acronimo);
         $query = $this->db->get();
-        //--Data Validation
-        if ($query->num_rows() > 0)
-        {
-            $data = array (
-                'msj'  => 'No se ha modificado ningún dato',
-                'link' => 'User/Empresas',
-                $on    = "red-text",
-                //--
-                'ID'             => $id,
-                'title'          => 'Editar Empresa #'.$id,
-                'modo_inicio'    => '', 
-                'modo_personas'  => '',
-                'modo_empresas'  => $on,
-                'modo_registros' => '',
-                'modo_buscar'    => '',
-                'modo_info'      => '',
-                'modo_salir'     => '',                
-            );
-            $this->load->view('user/header',$data);
-            $this->load->view('user/duplicado',$data);
-            $this->load->view('user/footer',$data);
-        }
-        else
-        {
-            //--Update Data in DB
-            $data = array(
-                'id_empresa' => $id,
-                'r_social'   => $r_social,
-                'acronimo'   => $acronimo,
-            );
-            $this->db->where('id_empresa',$id);
-            $this->db->replace('empresa', $data);
-            redirect('User/Empresas');
-        }
+        
+        //--Update Data in DB
+        $data = array(
+            'id_empresa' => $id,
+            'r_social'   => $r_social,
+            'acronimo'   => $acronimo,
+        );
+        $this->db->where('id_empresa',$id);
+        $this->db->replace('empresa', $data);
+        redirect('User/Empresas');
     }
 }
 ?>
