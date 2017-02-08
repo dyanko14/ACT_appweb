@@ -40,7 +40,7 @@
             <!--Inputs-->
             <?= form_open('Login/validation'); ?>
             <i class="material-icons prefix">account_circle</i>
-            <input type="text" class="validate" style="text-align: center" name="Usuario"  placeholder="Usuario">
+            <input type="text" class="validate" style="text-align: center" name="Usuario"  placeholder="Usuario" autofocus>
             <i class="material-icons prefix">lock</i>
             <input type="password" class="validate" style="text-align: center" name="Password"  placeholder="Password">
             <!--Button-->

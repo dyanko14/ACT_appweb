@@ -8,7 +8,6 @@ class UserCheck extends CI_Model
             return $_SERVER['HTTP_X_FORWARDED_FOR'];
             return $_SERVER['REMOTE_ADDR'];
     }
-
     public function login()
     {
         //--Data from Post
@@ -22,7 +21,6 @@ class UserCheck extends CI_Model
         $this->db->where('user', $user);
         $this->db->limit(1);
         $query = $this->db->get();
-
         //--SQL
         if ($query->num_rows() == 1)
         {
@@ -31,7 +29,7 @@ class UserCheck extends CI_Model
                 if ($this->encrypt->decode($row->pass) == $pass)
                 {
                     //--Private Pages
-                    if ($row->permiso == 2)
+                    if ($row->permiso == 1)
                     {
                         //--Insert Data in Sesion Table
                         $data = array(
@@ -50,7 +48,7 @@ class UserCheck extends CI_Model
                         $this->session->mark_as_temp('logged_in', $time);      //-Adding time to Data Session
                         redirect('User/Inicio','refresh');
                     }
-                    else if ($row->permiso == 1)
+                    else if ($row->permiso == 2)
                     {
                         //--Insert Data in Sesion Table
                         $data = array(

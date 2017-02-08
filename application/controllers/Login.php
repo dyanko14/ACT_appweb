@@ -19,9 +19,6 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
-    $this->session->unset_userdata('logged_in');
-    $this->session->unset_userdata('logged_in2');
-    $this->session->sess_destroy();
     //--Formulario de Login
     $data = array('title' => ''); //Invalid Login Feedback
 		$this->load->view('login',$data);
