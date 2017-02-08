@@ -71,7 +71,12 @@
             $query->num_rows().
            "</span>- Safari:</a>";
       //--
-            $query = $this->db->query('SELECT * FROM sesiones WHERE navegador != "Chrome" AND navegador != "Firefox" AND navegador != "Internet Explorer" AND navegador != "Safari" ');
+            $query = $this->db->query('SELECT * FROM sesiones WHERE navegador = "Opera"');
+      echo "<a href='#!' class='collection-item left-align' style='color: gray'><span class='new badge blue' data-badge-caption=''>".
+            $query->num_rows().
+           "</span>- Opera:</a>";
+      //--
+            $query = $this->db->query('SELECT * FROM sesiones WHERE navegador != "Chrome" AND navegador != "Firefox" AND navegador != "Internet Explorer" AND navegador != "Safari" AND navegador != "Opera" ');
       echo "<a href='#!' class='collection-item left-align' style='color: gray'><span class='new badge blue' data-badge-caption=''>".
             $query->num_rows().
            "</span>- Otros:</a>";

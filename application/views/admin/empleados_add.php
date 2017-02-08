@@ -1,6 +1,5 @@
 <main>
 <br>
-<blockquote>
 <div class="row">
     <div class="col l1 m1 s1">
     </div>
@@ -102,5 +101,4 @@
     </button>
     <br>
     <br>
-</blockquote>
 </main>

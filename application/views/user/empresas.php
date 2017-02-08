@@ -31,7 +31,6 @@
  ?>
 </tbody>
 </table>
-</table>
 
 <!--Total Records-->
 <div class='center-align' style="border-top: 1px dotted gray">

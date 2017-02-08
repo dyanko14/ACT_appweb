@@ -24,20 +24,89 @@ class Registro extends CI_Model
         $completo     = $this->input->post('completo');
         $duracion     = strtotime($hora_out) - strtotime($hora_in);
         //--Update Data in DB
-        $data = array(
-            'id_reg'       => $id,
-            'fecha_in'     => $fecha_in,
-            'hora_in'      => $hora_in,
-            'id_visitante' => $id_visitante,
-            'id_act'       => $id_act,
-            'id_razon'     => $id_razon,
-          	'hora_out'     => $hora_out,
-          	'completo'     => $completo,
-          	'duracion'     => $duracion,
-        );
-        $this->db->where('id_reg',$id);
-        $this->db->replace('registro', $data);
-       	redirect('User/Registros');
+        if ($hora_in > $hora_out)
+        {
+            $data = array (
+                $on    = "red-text",
+                //--
+                'ID'             => $id,
+                'title'          => 'Terminar Visita #'.$id,
+                'modo_inicio'    => '', 
+                'modo_personas'  => '',
+                'modo_empresas'  => '',
+                'modo_registros' => $on,
+                'modo_buscar'    => '',
+                'modo_info'      => '',
+                'modo_salir'     => '',
+                'msj'            => 'Rango de horas no válido',
+            );
+            //Main structure
+            $this->load->view('user/header',$data);
+            $this->load->view('user/registros_edit',$data);
+            $this->load->view('user/registros_error',$data);
+            $this->load->view('user/footer',$data);
+        }
+        else if ($hora_out < $hora_in)
+        {
+            $data = array (
+                $on    = "red-text",
+                //--
+                'ID'             => $id,
+                'title'          => 'Terminar Visita #'.$id,
+                'modo_inicio'    => '', 
+                'modo_personas'  => '',
+                'modo_empresas'  => '',
+                'modo_registros' => $on,
+                'modo_buscar'    => '',
+                'modo_info'      => '',
+                'modo_salir'     => '',
+                'msj'            => 'Rango de horas no válido',
+            );
+            //Main structure
+            $this->load->view('user/header',$data);
+            $this->load->view('user/registros_edit',$data);
+            $this->load->view('user/registros_error',$data);
+            $this->load->view('user/footer',$data);
+        }
+        else if ($hora_out == $hora_in)
+        {
+            $data = array (
+                $on    = "red-text",
+                //--
+                'ID'             => $id,
+                'title'          => 'Terminar Visita #'.$id,
+                'modo_inicio'    => '', 
+                'modo_personas'  => '',
+                'modo_empresas'  => '',
+                'modo_registros' => $on,
+                'modo_buscar'    => '',
+                'modo_info'      => '',
+                'modo_salir'     => '',
+                'msj'            => 'La visita no puede durar menos de 1 minuto',
+            );
+            //Main structure
+            $this->load->view('user/header',$data);
+            $this->load->view('user/registros_edit',$data);
+            $this->load->view('user/registros_error',$data);
+            $this->load->view('user/footer',$data);
+        }
+        else
+        {
+            $data = array(
+                'id_reg'       => $id,
+                'fecha_in'     => $fecha_in,
+                'hora_in'      => $hora_in,
+                'id_visitante' => $id_visitante,
+                'id_act'       => $id_act,
+                'id_razon'     => $id_razon,
+              	'hora_out'     => $hora_out,
+              	'completo'     => $completo,
+              	'duracion'     => $duracion,
+            );
+            $this->db->where('id_reg',$id);
+            $this->db->replace('registro', $data);
+           	redirect('User/Registros');
+        }
     }
 }
 ?>

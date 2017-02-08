@@ -9,7 +9,7 @@
 <!--Date Begin-->
 <div class='col l6 m6 s12'>
   <span style="color: green">Fecha Inicial</span>'
-  <input class="datepicker" name="Fecha1" >
+  <input class="datepicker" name="Fecha1" value="click aquí">
 </div>
 <div class='col l6 m6 s12'>
   <span style="color: red">Fecha Final</span>

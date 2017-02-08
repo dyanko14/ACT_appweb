@@ -77,4 +77,3 @@ foreach ($query->result() as $row){
     <div class="col s1 m2 l2">
     </div>
 </div>
-</main>

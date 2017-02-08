@@ -1,6 +1,5 @@
 <main>
 <br>
-<blockquote>
 <div class="row">
     <div class="col l1 m1 s1">
     </div>
@@ -111,5 +110,4 @@
     <button type="submit" name="submit" class="waves-effect waves-light green btn"><i class="material-icons left">edit</i>
         Modificar
     </button>
-</blockquote>
 </main>

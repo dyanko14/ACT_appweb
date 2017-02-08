@@ -1,6 +1,7 @@
 <main>
 <br>
-<blockquote>
+
+<div style="padding-left: 30px; padding-right: 30px">
 <!--Query Data-->
 <?php
   $this->db->select('*');
@@ -43,11 +44,9 @@
     ?>
     </tbody>
   </table>
-</blockquote>
+  
 <!--Total Records-->
-<blockquote>
 <div class='center-align' style="border-top: 1px dotted gray">
    <h6><?php echo 'Registros: '.'<b>'.$query->num_rows().'</b>'; ?></h6>
 </div>
-</blockquote>
-</main>
+</div>
