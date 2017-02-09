@@ -1,11 +1,13 @@
 <main>
 <br>
 <div class="row">
-    <div class="col l4 m1 s1">
+
+    <div class="col l3 m1 s1">
     </div>
-    <div class="col l4 m10 s10">
-        <?= form_open('User/Inicio/Form_add'); ?>
-        <br>
+
+    <div class="col l6 m10 s10">
+    <?= form_open('User/Inicio/Form_add'); ?>
+    <br>
         <div class="row">
             <div class="col l1 m3 s6">
                 <i class="material-icons">date_range</i>
@@ -15,7 +17,7 @@
             </div>
             <div class="col l8 m6 s12">
                 <input name="fecha_in" type="date" class="datepicker" value="<?php echo date('Y-m-d'); ?>">
-            </div>            
+            </div>
         </div>
         <div class="row">
             <div class="col l1 m3 s6">
@@ -71,7 +73,7 @@
                 ?>
                 </select>
                 <span style="text-align: center;" class="red-text"><b><?php echo form_error('empleado'); ?></b></span>
-            </div>            
+            </div>
         </div>
         <div class="row">
             <div class="col l1 m3 s6">
@@ -87,26 +89,25 @@
                         $query = $this->db->query("SELECT * FROM razon ORDER BY razon ASC");
                         foreach ($query->result() as $row){
                     ?>
-                        <option value=<?= $row->id_razon ?>><p><?= $row->razon ?></p>
+                        <option value=<?= $row->id_razon ?>><p><?= $row->razon ?></p></option>
                     <?php
                     }
                     ?>
                 </select>
                 <span style="text-align: center;" class="red-text"><b><?php echo form_error('razon'); ?></b></span>
-            </div>            
-        </div>
-        <div class="row">
-            <div class="col l2 m4 s12">
             </div>
-            <div class="col l8 m4 s12">
-                <button type="submit" name="submit" class="waves-effect waves-light blue btn"><i class="material-icons left">done</i>
-                    Registrar
-                </button>
-                <?= form_close() ?>
-            </div>
-            <div class="col l2 m4 s12">
-            </div>            
         </div>
     </div>
+
+    <div class="col l3 m1 s1">
+    </div>
 </div>
+
+<!--Button-->
+<div class="row center-align">
+    <button type="submit" name="submit" class="waves-effect waves-light blue btn"><i class="material-icons left">done</i>
+        Registrar
+    </button>
+</div>
+<?= form_close() ?>
 </main>
