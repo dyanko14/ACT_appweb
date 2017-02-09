@@ -1,8 +1,8 @@
 Bienvenidos a mi Sistema de Control de Visitas!
 ===================
 
-Hola amigo que tengas un buen día/tarde/noche, mi nombre es Dyanko Cisneros Mendoza, soy originario de Parras de la Fuente Coahuila, soy un entusiasta de las tecnologías y la programación.
-En este repositorio podrás encontrar un proyecto el cual llevo tiempo desarrollando, está siendo adaptado a la empresa en la cual laboro actualmente y su objetivo primordial de implementación es llevar un control un control y registro detallado de las visitas que llegan a la empresa.
+Hola amigo que tengas un buen día/tarde/noche, mi nombre es **Dyanko Cisneros Mendoza**, soy originario de Parras de la Fuente Coahuila, soy un entusiasta de las tecnologías y la programación.
+En este repositorio podrás encontrar un proyecto el cual llevo tiempo desarrollando, está siendo adaptado a la empresa en la cual laboro actualmente en Monterrey N.L. y su objetivo primordial de implementación es llevar un control un control y registro detallado de las visitas que llegan a la empresa.
 
 Actualmente curso el 3er semestre en la Universidad de Guadalajara y este proyecto forma parte de las materias que se han llevado a cabo.
 
