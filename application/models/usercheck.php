@@ -8,6 +8,18 @@ class UserCheck extends CI_Model
             return $_SERVER['HTTP_X_FORWARDED_FOR'];
             return $_SERVER['REMOTE_ADDR'];
     }
+    public function insertSession($user)
+    {
+        $data = array(
+            'fecha'     => date('Y:m:d'),
+            'hora'      => date('H:i:s'),
+            'user'      => $user,
+            'navegador' => $this->agent->browser(),
+            'so'        => $this->agent->platform(),
+            'ip'        => self::getRealIP(),
+        );
+        $this->db->insert('sesiones', $data);
+    }
     public function login()
     {
         //--Data from Post
@@ -29,48 +41,29 @@ class UserCheck extends CI_Model
                 if ($this->encrypt->decode($row->pass) == $pass)
                 {
                     //--Private Pages
-                    if ($row->permiso == 1)
+                    switch ($row->permiso)
                     {
-                        //--Insert Data in Sesion Table
-                        $data = array(
-                            'fecha'     => date('Y:m:d'),
-                            'hora'      => date('H:i:s'),
-                            'user'      => $row->user,
-                            'navegador' => $this->agent->browser(),
-                            'so'        => $this->agent->platform(),
-                            'ip'        => self::getRealIP(),
-                        );
-                        $this->db->insert('sesiones', $data);
-                        
-                        //--Redirect
-                        $time = 7200; //Seconds = 2Hrs
-                        $this->session->set_userdata('logged_in', $row->user); //-Create Data Session
-                        $this->session->mark_as_temp('logged_in', $time);      //-Adding time to Data Session
-                        redirect('User/Inicio','refresh');
-                    }
-                    else if ($row->permiso == 2)
-                    {
-                        //--Insert Data in Sesion Table
-                        $data = array(
-                            'fecha'     => date('Y:m:d'),
-                            'hora'      => date('H:i:s'),
-                            'user'      => $row->user,
-                            'navegador' => $this->agent->browser(),
-                            'so'        => $this->agent->platform(),
-                            'ip'        => self::getRealIP(),
-                        );
-                        $this->db->insert('sesiones', $data);
-                        
-                        //--Redirect
-                        $time = 7200; //Seconds = 2Hrs
-                        $this->session->set_userdata('logged_in2', $row->user); //-Create Data Session
-                        $this->session->mark_as_temp('logged_in2', $time);      //-Adding time to Data Session
-                        redirect('Admin/Inicio','refresh');
-                    } //--End Else If row permiso
+                        case 1:
+                            self::insertSession($row->user);
+                            //--Redirect
+                            $time = 7200; //Seconds = 2Hrs
+                            $this->session->set_userdata('logged_in', $row->user); //-Create Data Session
+                            $this->session->mark_as_temp('logged_in', $time);      //-Adding time to Data Session
+                            redirect('User/Inicio','refresh');
+                        break;
+                        case 2:                        
+                            self::insertSession($row->user);
+                            //--Redirect
+                            $time = 7200; //Seconds = 2Hrs
+                            $this->session->set_userdata('logged_in2', $row->user); //-Create Data Session
+                            $this->session->mark_as_temp('logged_in2', $time);      //-Adding time to Data Session
+                            redirect('Admin/Inicio','refresh');
+                        break;
+                    } //--End Switch
                 } //--End If Decode
                 else
                 {
-                    $data = array('title' => 'Datos equivocados');            
+                    $data = array('title' => 'Datos equivocados');
                     $this->load->view('login',$data);
                 }
             } //--End Foreach

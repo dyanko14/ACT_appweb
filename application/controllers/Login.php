@@ -8,12 +8,12 @@ class Login extends CI_Controller {
     //--Insert new Users
     $this->load->library('encrypt');
     /*
-    $pass1 = 'admin';
-    $pass2 = 'user';
+    $pass1 = 'sarah0808';
+    $pass2 = 'dics2017';
     $encrypted_pass1 = $this->encrypt->encode($pass1);
     $encrypted_pass2 = $this->encrypt->encode($pass2);
-    $this->db->query("INSERT INTO login (user, pass, permiso) VALUES ('admin','$encrypted_pass1',1)");
-    $this->db->query("INSERT INTO login (user, pass, permiso) VALUES ('user','$encrypted_pass2',2)");
+    $this->db->query("INSERT INTO login (user, pass, permiso) VALUES ('mcazares','$encrypted_pass1',1)");
+    $this->db->query("INSERT INTO login (user, pass, permiso) VALUES ('dcisneros','$encrypted_pass2',2)");
     */
   }
 
