@@ -46,7 +46,7 @@ class UserCheck extends CI_Model
                         case 1:
                             self::insertSession($row->user);
                             //--Redirect
-                            $time = 7200; //Seconds = 2Hrs
+                            $time = 43200; //Seconds = 12Hrs
                             $this->session->set_userdata('logged_in', $row->user); //-Create Data Session
                             $this->session->mark_as_temp('logged_in', $time);      //-Adding time to Data Session
                             redirect('User/Inicio','refresh');
@@ -54,7 +54,7 @@ class UserCheck extends CI_Model
                         case 2:                        
                             self::insertSession($row->user);
                             //--Redirect
-                            $time = 7200; //Seconds = 2Hrs
+                            $time = 43200; //Seconds = 12Hrs
                             $this->session->set_userdata('logged_in2', $row->user); //-Create Data Session
                             $this->session->mark_as_temp('logged_in2', $time);      //-Adding time to Data Session
                             redirect('Admin/Inicio','refresh');
