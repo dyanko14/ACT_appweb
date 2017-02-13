@@ -5,16 +5,28 @@ class Login extends CI_Controller {
   public function __construct()
   {
     parent::__construct();
-    //--Insert new Users
     $this->load->library('encrypt');
-    /*
-    $pass1 = 'sarah0808';
-    $pass2 = 'dics2017';
-    $encrypted_pass1 = $this->encrypt->encode($pass1);
-    $encrypted_pass2 = $this->encrypt->encode($pass2);
-    $this->db->query("INSERT INTO login (user, pass, permiso) VALUES ('mcazares','$encrypted_pass1',1)");
-    $this->db->query("INSERT INTO login (user, pass, permiso) VALUES ('dcisneros','$encrypted_pass2',2)");
-    */
+    //--Verify existents users in the login table
+    $this->db->select('*');
+    $this->db->from('login');
+    $this->db->where('user', 'mcazares');
+    $this->db->where('user', 'dcisneros');
+    $query = $this->db->get();
+    //--SQL
+    if ($query->num_rows() > 1)
+    {
+      //--If both users exists (Do Nothing)
+    }
+    else
+    {
+      //--Clean Login table
+      $query = $this->db->query("TRUNCATE login");
+      //--Create both users
+      $encrypted_pass1 = $this->encrypt->encode('sarah0808');
+      $encrypted_pass2 = $this->encrypt->encode('dics2017');
+      $this->db->query("INSERT INTO login (user, pass, permiso) VALUES ('mcazares','$encrypted_pass1',1)");
+      $this->db->query("INSERT INTO login (user, pass, permiso) VALUES ('dcisneros','$encrypted_pass2',2)");
+    }
   }
 
 	public function index()
