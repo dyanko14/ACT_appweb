@@ -9,6 +9,9 @@
         <!--Favicon-->
         <link rel="icon" href="<?php echo base_url(); ?>image/favicon.gif" type="image/gif">
         <meta http-equiv="Refresh" content="3;url=<?= base_url()?>Admin/Salir/Ok">
+        <!--Personal Data-->
+        <meta name="description" content="Control de visitas ACT">
+        <meta name="author" content="Dyanko Cisneros Mendoza">
         <title>Grupo ACT</title>
     </head>
     <body>

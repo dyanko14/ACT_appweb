@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!--Favicon-->
     <link rel="icon" href="<?php echo base_url(); ?>image/favicon.gif" type="image/gif">
+    <!--Personal Data-->
+    <meta name="description" content="Control de visitas ACT">
+    <meta name="author" content="Dyanko Cisneros Mendoza">
     <title>Grupo ACT</title>
     <!--Import jQuery before materialize.js-->
     <script src="<?= base_url()?>scripts/jquery-3.1.1.min.js"></script>
