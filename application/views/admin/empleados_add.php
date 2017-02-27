@@ -22,7 +22,7 @@
             <i class="material-icons">person_pin</i>
         </div>
         <div class="col l2 m3 s6">
-            <label><span style="color: red">*&nbsp;</span>ApellidoM:</label>
+            <label><span style="color: red">*&nbsp;</span>Apellido P:</label>
         </div>
         <div class="col l6 m6 s12" style="text-align: center">
             <?= form_input('ApellidoM', set_value('ApellidoM')) ?>

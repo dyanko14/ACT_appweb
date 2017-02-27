@@ -7,8 +7,8 @@
       <tr>
         <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>ID</th>
         <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Nombre</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Apellido 1</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Apellido 2</th>
+        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Apellido P</th>
+        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Apellido M</th>
         <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Genero</th>
         <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Identificación</th>
         <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Empresa</th>
