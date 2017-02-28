@@ -1,20 +1,32 @@
+<!--Header-->
+<div class="row" style="border-bottom: solid 1px red">
+  <div class="col l2 m2 s2 center-align">
+    <br>
+    <ul>
+      <li><a href="#" data-activates="slide-out" class="btn-floating red button-collapse" class="btn-floating blue"><i class="material-icons">menu</i></a></li>
+    </ul>
+  </div>
+  <div class="col l10 m10 s10 center-align">            
+    <br>
+    <h5><?= $title ?></h5>
+  </div>
+</div>
+<!--/Header-->
 <main>
-<br>
-
 <div style="padding-left: 30px; padding-right: 30px">
 <table id='large' class='tablesorter highlight centered responsive-table'>
     <thead>
       <tr>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>ID</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Fecha</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Hora In</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Visitante</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Empresa</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Empleado</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Motivo</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Hora Out</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Se fue?</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Duracion</th>
+        <th>ID</th>
+        <th>Fecha</th>
+        <th>Hora In</th>
+        <th>Visitante</th>
+        <th>Empresa</th>
+        <th>Empleado</th>
+        <th>Motivo</th>
+        <th>Hora Out</th>
+        <th>Se fue?</th>
+        <th>Duracion</th>
       </tr>
     </thead>
     <tbody>
@@ -126,10 +138,9 @@
  <?php
   }
  ?>
-</tbody>
-</table>
-<!--Total Records-->
-<div class='center-align' style="border-top: 1px dotted gray">
-   <h6><?php echo 'Registros: '.'<b>'.$query->num_rows().'</b>'; ?></h6>
-</div>
-</div>
+  </div>
+  </tbody>
+  </div>
+  </main>
+
+  </body>

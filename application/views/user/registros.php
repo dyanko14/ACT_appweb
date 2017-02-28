@@ -1,6 +1,18 @@
+<!--Header-->
+<div class="row" style="border-bottom: solid 1px red">
+  <div class="col l2 m2 s2 center-align">
+    <br>
+    <ul>
+      <li><a href="#" data-activates="slide-out" class="btn-floating red button-collapse" class="btn-floating blue"><i class="material-icons">menu</i></a></li>
+    </ul>
+  </div>
+  <div class="col l10 m10 s10 center-align">            
+    <br>
+    <h5><?= $title ?></h5>
+  </div>
+</div>
+<!--/Header-->
 <main>
-<br>
-
 <div style="padding-left: 30px; padding-right: 30px">
 <table id='large' class='tablesorter highlight centered responsive-table'>
     <thead>
@@ -85,8 +97,7 @@
  ?>
 </tbody>
 </table>
-<!--Total Records-->
-<div class='center-align' style="border-top: 1px dotted gray">
-   <h6><?php echo 'Registros: '.'<b>'.$query->num_rows().'</b>'; ?></h6>
 </div>
-</div>
+</main>
+
+</body>

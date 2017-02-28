@@ -1,5 +1,18 @@
+<!--Header-->
+<div class="row" style="border-bottom: solid 1px red">
+  <div class="col l2 m2 s2 center-align">
+    <br>
+    <ul>
+      <li><a href="#" data-activates="slide-out" class="btn-floating red button-collapse" class="btn-floating blue"><i class="material-icons">menu</i></a></li>
+    </ul>
+  </div>
+  <div class="col l10 m10 s10 center-align">            
+    <br>
+    <h5><?= $title ?></h5>
+  </div>
+</div>
+<!--/Header-->
 <main>
-<br>
 <div class="row">
 
     <div class="col l3 m1 s1">
@@ -110,4 +123,8 @@
     </button>
 </div>
 <?= form_close() ?>
+</tbody>
+</div>
 </main>
+
+</body>

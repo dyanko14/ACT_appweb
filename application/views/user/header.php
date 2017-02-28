@@ -40,17 +40,4 @@
       <li><a href="<?= base_url()?>User/Info" class=<?=$modo_info?>><i class="material-icons">pie_chart_outlined</i>Estadísticas</a></li>
       <li><a href="<?= base_url()?>User/Salir" class=<?=$modo_salir?>><i class="material-icons">exit_to_app</i>Salir</a></li>
     </ul>
-     
     <!--/Navbar-->
-    <!--Header-->
-    <div class="row center-align">
-      <div class="col l2 m1 s2">
-      <br>
-        <a href="#" data-activates="slide-out" class="button-collapse"><div class="btn-floating btn-large red white-text"><i class="material-icons">menu</i></div></a>
-      </div>
-      <div class="col l10 m11 s10 center-align">            
-        <br><h5><?= $title ?></h5>
-      </div>
-    </div>
-    <HR>
-    <!--/Header-->

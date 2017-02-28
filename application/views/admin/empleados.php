@@ -1,18 +1,36 @@
+<!--Header-->
+<div class="row" style="border-bottom: solid 1px gray">
+  <div class="col l3 m1 s2 center-align">
+    <br>
+    <ul>
+      <li><a href="#" data-activates="slide-out" class="btn-floating red button-collapse" class="btn-floating blue"><i class="material-icons">menu</i></a></li>
+    </ul>
+  </div>
+  <div class="col l8 m10 s8 center-align">            
+    <br>
+    <h5><?= $title ?></h5>
+  </div>
+  <div class="col l1 m1 s2 center-align">  
+    <br>
+    <ul>
+      <li><a class="btn-floating blue" href="<?=base_url()?>Admin/Empleados/Add"><i class="material-icons">add</i></a></li>
+    </ul>
+  </div>
+</div>
+<!--/Header-->
 <main>
-<br>
-
 <div style="padding-left: 30px; padding-right: 30px">
 <table id='large' class='tablesorter highlight centered responsive-table'>
     <thead>
       <tr>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>ID</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Nombre</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Apellido P</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Cargo</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Correo</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Género</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Editar</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Activo</th>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido P</th>
+        <th>Cargo</th>
+        <th>Correo</th>
+        <th>Género</th>
+        <th>Editar</th>
+        <th>Activo</th>
       </tr>
     </thead>
     <tbody>
@@ -61,19 +79,7 @@
  ?>
 </tbody>
 </table>
+</div>
+</main>
 
-<!--Total Records-->
-<div class='center-align' style="border-top: 1px dotted gray">
-   <h6><?php echo 'Registros: '.'<b>'.$query->num_rows().'</b>'; ?></h6>
-</div>
-</div>
-
-<!--Air Button-->
-<div class="fixed-action-btn horizontal click-to-toggle tooltipped" data-position="top" data-delay="50" data-tooltip="Opciones">
-	<a class="btn-floating btn-large blue-grey darken-2">
-    <i class="material-icons">menu</i>
-   	</a>
-  	<ul>
-   	<li><a class="btn-floating blue btn"  href="<?=base_url()?>Admin/Empleados/Add"><i class="material-icons">add</i></a></li>
- 	</ul>
-</div>
+</body>

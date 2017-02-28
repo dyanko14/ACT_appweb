@@ -1,5 +1,18 @@
+<!--Header-->
+<div class="row" style="border-bottom: solid 1px gray">
+  <div class="col l2 m2 s2 center-align">
+    <br>
+    <ul>
+      <li><a href="#" data-activates="slide-out" class="btn-floating red button-collapse" class="btn-floating blue"><i class="material-icons">menu</i></a></li>
+    </ul>
+  </div>
+  <div class="col l10 m10 s10 center-align">            
+    <br>
+    <h5><?= $title ?></h5>
+  </div>
+</div>
+<!--/Header-->
 <main>
-<br>
 <div class="row" style="text-align: center;">
   <div class="col l4 m4 s12">
     <h5><i class="small material-icons">settings_applications</i><br><span style="color: gray"><?= $this->load->db->version() ?></span></h5>
@@ -20,4 +33,9 @@
   </button>
   <?= form_close()?>
 </div>
+</div>
+</tbody>
+</div>
 </main>
+
+</body>

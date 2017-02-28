@@ -1,6 +1,18 @@
+<!--Header-->
+<div class="row" style="border-bottom: solid 1px gray">
+  <div class="col l2 m2 s2 center-align">
+    <br>
+    <ul>
+      <li><a href="#" data-activates="slide-out" class="btn-floating red button-collapse" class="btn-floating blue"><i class="material-icons">menu</i></a></li>
+    </ul>
+  </div>
+  <div class="col l10 m10 s10 center-align">            
+    <br>
+    <h5><?= $title ?></h5>
+  </div>
+</div>
+<!--/Header-->
 <main>
-<br>
-
 <div style="padding-left: 30px; padding-right: 30px">
 <!--Query Data-->
 <?php
@@ -16,13 +28,13 @@
   <table id='large' class='tablesorter highlight centered responsive-table'>
     <thead>
       <tr>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>ID</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Fecha</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Hora</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Usuario</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Navegador</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>SO</th>
-        <th class="tr_selected tooltipped" data-delay='30' data-tooltip='Ordenar' data-position='top'>Dirección IP</th>
+        <th>ID</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Usuario</th>
+        <th>Navegador</th>
+        <th>SO</th>
+        <th>Dirección IP</th>
       </tr>
     </thead>
     <tbody>
@@ -42,11 +54,9 @@
     <?php
     }
     ?>
-    </tbody>
-  </table>
-  
-<!--Total Records-->
-<div class='center-align' style="border-top: 1px dotted gray">
-   <h6><?php echo 'Registros: '.'<b>'.$query->num_rows().'</b>'; ?></h6>
+</tbody>
+</table>
 </div>
-</div>
+</main>
+
+</body>
