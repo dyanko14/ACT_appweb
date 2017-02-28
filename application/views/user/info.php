@@ -460,8 +460,6 @@ $(function () {
         });
     });
 </script>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
 <div class="row">
   <div class="col l6 m12 s12">
     <div id="container1"><!--Graphic 1--></div>
@@ -488,5 +486,8 @@ $(function () {
 </tbody>
 </div>
 </main>
+<!--Highcharys Library CDN-->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
 
 </body>
