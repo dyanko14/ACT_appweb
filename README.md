@@ -9,9 +9,9 @@ Actualmente curso el 3er semestre en la Universidad de Guadalajara y este proyec
 Este desarrollo hace uso de las siguientes tecnologías:
 - Codeigniter (PHP + POO + MVC)
 - MaterializeCSS (HTML + CSS + Jquery (JS) / Responsive Design)
-- MySQL
+- MySQL (María DB)
 - Highcharts Library
-- Tablesorter Library
+- DataTables Library
 
 El sistema se compone de los siguientes módulos:
 ===================

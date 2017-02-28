@@ -3,7 +3,7 @@
   <div class="col l2 m2 s2 center-align">
     <br>
     <ul>
-      <li><a href="#" data-activates="slide-out" class="btn-floating red button-collapse" class="btn-floating blue"><i class="material-icons">menu</i></a></li>
+      <li><a href="#" data-activates="slide-out" class="btn-floating blue-grey button-collapse" class="btn-floating blue"><i class="material-icons">menu</i></a></li>
     </ul>
   </div>
   <div class="col l10 m10 s10 center-align">            
