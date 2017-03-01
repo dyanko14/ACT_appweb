@@ -51,6 +51,143 @@
   </div>
 </div>
 <!--Query´s-->
+<!--Query´s-->
+<hr>
+<script type="text/javascript">
+$(function () {
+    Highcharts.chart('container3', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Registro de visitas del presente año'
+        },
+        subtitle: {
+            text: ''+<?= date('Y') ?>
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                rotation: -45,
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Visitas'
+            }
+        },
+        tooltip: {
+            pointFormat: 'Visitas'
+        },
+        series: [{
+            name: 'Visitas mensuales',
+            data: [
+                ['Enero',
+                  <?php
+                    $query = $this->db->query("SELECT COUNT(*) AS total FROM registro WHERE MONTH(fecha_in)=1 ");
+                    foreach ($query->result() as $row)
+                      { echo $row->total; }
+                  ?>
+                ],
+                ['Febrero',
+                  <?php
+                    $query = $this->db->query("SELECT COUNT(*) AS total FROM registro WHERE MONTH(fecha_in)=2 ");
+                    foreach ($query->result() as $row)
+                      { echo $row->total; }
+                  ?>
+                ],                
+                ['Marzo',
+                  <?php
+                    $query = $this->db->query("SELECT COUNT(*) AS total FROM registro WHERE MONTH(fecha_in)=3 ");
+                    foreach ($query->result() as $row)
+                      { echo $row->total; }
+                  ?>
+                ],
+                ['Abril',
+                  <?php
+                    $query = $this->db->query("SELECT COUNT(*) AS total FROM registro WHERE MONTH(fecha_in)=4 ");
+                    foreach ($query->result() as $row)
+                      { echo $row->total; }
+                  ?>
+                ],
+                ['Mayo',
+                  <?php
+                    $query = $this->db->query("SELECT COUNT(*) AS total FROM registro WHERE MONTH(fecha_in)=5 ");
+                    foreach ($query->result() as $row)
+                      { echo $row->total; }
+                  ?>
+                ],
+                ['Junio',
+                  <?php
+                    $query = $this->db->query("SELECT COUNT(*) AS total FROM registro WHERE MONTH(fecha_in)=6 ");
+                    foreach ($query->result() as $row)
+                      { echo $row->total; }
+                  ?>
+                ],
+                ['Julio',
+                  <?php
+                    $query = $this->db->query("SELECT COUNT(*) AS total FROM registro WHERE MONTH(fecha_in)=7 ");
+                    foreach ($query->result() as $row)
+                      { echo $row->total; }
+                  ?>
+                ],
+                ['Agosto',
+                  <?php
+                    $query = $this->db->query("SELECT COUNT(*) AS total FROM registro WHERE MONTH(fecha_in)=8 ");
+                    foreach ($query->result() as $row)
+                      { echo $row->total; }
+                  ?>
+                ],
+                ['Septiembre',
+                  <?php
+                    $query = $this->db->query("SELECT COUNT(*) AS total FROM registro WHERE MONTH(fecha_in)=9 ");
+                    foreach ($query->result() as $row)
+                      { echo $row->total; }
+                  ?>
+                ],
+                ['Octubre',
+                  <?php
+                    $query = $this->db->query("SELECT COUNT(*) AS total FROM registro WHERE MONTH(fecha_in)=10 ");
+                    foreach ($query->result() as $row)
+                      { echo $row->total; }
+                  ?>
+                ],
+                ['Noviembre',
+                  <?php
+                    $query = $this->db->query("SELECT COUNT(*) AS total FROM registro WHERE MONTH(fecha_in)=11 ");
+                    foreach ($query->result() as $row)
+                      { echo $row->total; }
+                  ?>
+                ],
+                ['Diciembre',
+                  <?php
+                    $query = $this->db->query("SELECT COUNT(*) AS total FROM registro WHERE MONTH(fecha_in)=12 ");
+                    foreach ($query->result() as $row)
+                      { echo $row->total; }
+                  ?>
+                ],
+            ],
+            dataLabels: {
+                enabled: true,
+                rotation: -90,
+                color: '#FFFFFF',
+                align: 'right',
+                format: '{point.y:.0f}', // one decimal
+                y: 10, // 10 pixels down from the top
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        }]
+    });
+});
+</script>
 <hr>
 <div class="row center-align">
   <div class="col l1 m1 s0">
@@ -95,10 +232,21 @@
             $query->num_rows().
            "</span>- Otros:</a>";
     ?>
+    <div class="row">
+      <div id="container3"><!--Graphic 3--></div>
+    </div>    
     </div>
   </div>
   <div class="col l1 m1 s0">
   </div>
+
+</tbody>
+</div>
+</main>
+<!--Highcharys Library CDN-->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
 </div>
 </h5>
 </div>
